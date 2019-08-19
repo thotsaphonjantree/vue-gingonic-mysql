@@ -1,0 +1,10 @@
+module.exports = {
+    devServer: {
+      host: 'localhost',
+      port: 4000, // CHANGE YOUR PORT HERE!
+    },
+  };
+
+npm install portfinder@1.0.21
+npm install axios@0.18.0 vuejs-logger@1.5.3
+npm install vue-router
