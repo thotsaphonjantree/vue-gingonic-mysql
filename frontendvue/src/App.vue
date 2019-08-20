@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <center>
-      <div v-bind:style="{ backgroundColor: '#99ff99'}">
-    <h1>Vue + Gin + MySQL</h1>
+      <div v-bind:style="{ backgroundColor: '#ffffff'}">
+    <h1>Vue  Gin  MySQL</h1>
     <table>
       <tbody>
         <tr>
@@ -25,7 +25,7 @@
     </div>
         </center>
     <router-view />
-  </div>
+    </div>
 </template>
 <script>
 export default {};
