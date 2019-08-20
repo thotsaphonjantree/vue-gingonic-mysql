@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 align="center">Students</h1>
+    <h1 align="center">{{major.major_name}}</h1>
     <table border="1" align="center" width="80%" cellspacing="0">
       <tr>
         <th>No.</th>
@@ -25,19 +25,26 @@ import api from "../api";
 export default {
   data() {
     return {
-      students: []
+      major: {},
+      students:[]
     };
   },
   methods: {
-    getAllStudent() {
-      api.getAllStudent().then(result => {
-        console.log(result);
-        this.students = result;
+    getStudent() {
+      api.getMajor(this.$route.params.major_id).then(result => {
+        this.major = result
+        console.log(this.major)
       });
+    },
+    getStudentByMajor(){
+        api.getStudentByMajor(this.$route.params.major_id).then(result =>{
+        this.students = result
+    });
     }
   },
   mounted() {
-    this.getAllStudent();
+    this.getStudent()
+    this.getStudentByMajor()
   }
 };
 </script>
