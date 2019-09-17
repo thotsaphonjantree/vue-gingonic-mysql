@@ -25,6 +25,7 @@
           <td>Major</td>
           <td>
             <select v-model="student.major_id">
+              <option disabled value>Please select one</option>
               <option
                 v-for="(major,index) in majors"
                 :key="index"
